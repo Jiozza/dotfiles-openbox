@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source $HOME/.aether-corevar
+source $HOME/.config/aether/aether-corevar
 
 case "$1" in
     "FM")

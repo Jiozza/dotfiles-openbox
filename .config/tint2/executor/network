@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # LOAD GLOBAL VARIABLE
-source $HOME/.aether-corevar
+source $HOME/.config/aether/aether-corevar
 
 # Network status for panel
 # Requires Material (Icomoon) Font

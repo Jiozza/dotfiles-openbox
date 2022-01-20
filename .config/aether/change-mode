@@ -2,13 +2,13 @@
 
 case "$1" in
     "comfy")
-    sed -i 's/THEME_MODE=.*/THEME_MODE="COMFY"/g' .aether-corevar
+    sed -i 's/THEME_MODE=.*/THEME_MODE="COMFY"/g' .config/aether/aether-corevar
     ;;
     "minimalism")
-    sed -i 's/THEME_MODE=.*/THEME_MODE="MINIMALISM"/g' .aether-corevar
+    sed -i 's/THEME_MODE=.*/THEME_MODE="MINIMALISM"/g' .config/aether/aether-corevar
     ;;
     *)
-    sed -i 's/THEME_MODE=.*/THEME_MODE="COMFY"/g' .aether-corevar
+    sed -i 's/THEME_MODE=.*/THEME_MODE="COMFY"/g' .config/aether/aether-corevar
     ;;
 esac
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Load Global Variable
-source $HOME/.aether-corevar
+source $HOME/.config/aether/aether-corevar
 
 marginsMode() {
     # Change openbox margins
@@ -32,7 +32,7 @@ aetherLight() {
     # Terminal Color Scheme
     xrdb ~/.config/aether/theme/aether-light/.Xresources &
     # Screenshot frame color
-    sed -i 's_SSFRAME=.*_SSFRAME="#F9F9F9"_' ~/.aether-corevar &
+    sed -i 's_SSFRAME=.*_SSFRAME="#F9F9F9"_' ~/.config/aether/aether-corevar &
     # Notify
     $NOTIFIER -r 13 -i "$ICONDIR/theme.png" -t 2000 -u low "Light Mode" "Change Theme" &
     # Live Reload GTK Theme
@@ -44,7 +44,6 @@ aetherLight() {
 
         # Change openbox menu icon based on theme
         sed -i "s|$HOME\/$ICON_DARK_DIR|$HOME\/$ICON_LIGHT_DIR|g" ~/.config/openbox/menu.xml &>/dev/null
-        sed -i "s|iruha|$USER|g" ~/.config/openbox/menu.xml &>/dev/null
         
         # Margins handler
         marginsMode
@@ -67,7 +66,7 @@ aetherDark() {
     # Terminal Color Scheme
     xrdb ~/.config/aether/theme/aether-dark/.Xresources &
     # Screenshot frame color
-    sed -i 's_SSFRAME=.*_SSFRAME="#21252B"_g' ~/.aether-corevar &
+    sed -i 's_SSFRAME=.*_SSFRAME="#21252B"_g' ~/.config/aether/aether-corevar &
     # Notify
     $NOTIFIER -r 13 -i "$ICONDIR/theme.png" -t 2000 -u low "Dark Mode" "Change Theme" &
     # Live Reload GTK Theme
@@ -79,7 +78,6 @@ aetherDark() {
 
         # Change openbox menu icon based on theme
         sed -i "s|$HOME\/$ICON_LIGHT_DIR|$HOME\/$ICON_DARK_DIR|g" ~/.config/openbox/menu.xml &>/dev/null
-        sed -i "s|iruha|$USER|g" ~/.config/openbox/menu.xml &>/dev/null
 
         # Margins handler
         marginsMode

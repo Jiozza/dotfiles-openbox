@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Load Global Variable
-source $HOME/.aether-corevar
+source $HOME/.config/aether/aether-corevar
 
 # MODIFIED from owl4ce
 

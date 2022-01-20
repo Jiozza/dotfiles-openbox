@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Load Global Variable
-source $HOME/.aether-corevar
+source $HOME/.config/aether/aether-corevar
 
 # Color Variable
 RED='\033[1;31m'
@@ -16,7 +16,7 @@ echo -e "Example : ${GREEN}/home/user/Pictures/image.jpg${NC}"
 echo -e "Use ${YELLOW}DEFAULT${NC} to use both theme default wallpaper"
 echo -e "${CYAN}-----------------------------------------------${NC}"
 read -p "Input : " -i "$HOME/" -e IMGPATH
-sed -i '10s|WALLPAPER=.*|WALLPAPER="'$IMGPATH'"|' ~/.aether-corevar && ~/.config/aether/scripts/wallpaper &>/dev/null
+sed -i '10s|WALLPAPER=.*|WALLPAPER="'$IMGPATH'"|' ~/.config/aether/aether-corevar && ~/.config/aether/scripts/wallpaper &>/dev/null
 
 if [[ ! "$?" = "0" ]]; then
     echo -e "${RED}wallpaper${NC}          | ${RED}*${NC} ERROR: invalid path/file"
