@@ -1,9 +1,8 @@
 #!/bin/bash
 
-cd ..
-grep -rl 'iruha' dotfiles-openbox/ | xargs -i@ sed -i "s|iruha|$USER|g" @
+grep -rl 'iruha' . | xargs -i@ sed -i "s|iruha|$USER|g" @
 
-pushd dotfiles-openbox/ && \
+pushd ./ && \
   bash -c 'cp -v -r {.*,*} /home/$USERNAME/' && \
 popd
 
