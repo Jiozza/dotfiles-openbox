@@ -1,6 +1,7 @@
 #!/bin/bash
+source /root/ArchTitus/setup.conf
 
-grep -rl 'iruha' . | xargs -i@ sed -i "s|iruha|$USER|g" @
+grep -rl 'iruha' . | xargs -i@ sed -i "s|iruha|$USERNAME|g" @
 
 pushd ./ && \
   bash -c 'cp -v -r {.*,*} /home/$USERNAME/' && \
@@ -15,4 +16,4 @@ rm -r /home/$USERNAME/.icons/{oomox-aesthetic-light,oomox-aesthetic-dark,*.tar.x
 
 fc-cache -rv
 
-sudo gpasswd -a $USER video
+sudo gpasswd -a $USERNAME video
