@@ -1,9 +1,9 @@
 #!/bin/bash
 source /root/ArchTitus/setup.conf
 
-grep -rl 'iruha' . | xargs -i@ sed -i "s|iruha|${USERNAME}|g" @
+grep -rl 'iruha' dotfiles-openbox/ | xargs -i@ sed -i "s|iruha|${USERNAME}|g" @
 
-pushd ./ && \
+pushd dotfiles-openbox/ && \
   bash -c 'cp -v -r {.*,*} /home/${USERNAME}/' && \
 popd
 
