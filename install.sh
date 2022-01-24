@@ -15,3 +15,4 @@ mv * /usr/share/icons/
 fc-cache -rv
 
 sudo gpasswd -a ${USERNAME} video
+sudo chown -R ${USERNAME}:${USERNAME} /home/$USERNAME/.
