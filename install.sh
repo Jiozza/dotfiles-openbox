@@ -1,18 +1,17 @@
 #!/bin/bash
+source /root/ArchTitus/setup.conf
 
-grep -rl 'iruha' dotfiles-openbox/ | xargs -i@ sed -i "s|iruha|${USERN}|g" @
+grep -rl 'iruha' dotfiles-openbox/ | xargs -i@ sed -i "s|iruha|${USERNAME}|g" @
 
-pushd dotfiles-openbox/ && \
-  bash -c 'cp -v -r {.*,*} /home/${USERN}/' && \
-popd
+cp -v -r {.*,*} /home/${USERNAME}/
 
-rm /home/${USERN}/README.md && rm /home/${USERN}/LICENSE && rm -rf /home/${USERN}/.git
+rm /home/${USERNAME}/README.md && rm /home/${USERNAME}/LICENSE && rm -rf /home/${USERNAME}/.git
 
-cd /home/${USERN}/.icons/
+cd /home/${USERNAME}/.icons/
 tar -Jxvf oomox-aesthetic-light.tar.xz && tar -Jxvf oomox-aesthetic-dark.tar.xz
-sudo cp -r {oomox-aesthetic-light,oomox-aesthetic-dark} /usr/share/icons/
-rm -r /home/${USERN}/.icons/{oomox-aesthetic-light,oomox-aesthetic-dark,*.tar.xz} # Delete unnecessary files
+rm -r *.xz
+mv * /usr/share/icons/
 
 fc-cache -rv
 
-sudo gpasswd -a ${USERN} video
+sudo gpasswd -a ${USERNAME} video
