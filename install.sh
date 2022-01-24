@@ -3,7 +3,7 @@ source /root/ArchTitus/setup.conf
 
 grep -rl 'iruha' dotfiles-openbox/ | xargs -i@ sed -i "s|iruha|${USERNAME}|g" @
 
-cp -v -r {.*,*} /home/${USERNAME}/
+cp -v -r dotfiles-openbox/{.*,*} /home/${USERNAME}/
 
 rm /home/${USERNAME}/README.md && rm /home/${USERNAME}/LICENSE && rm -rf /home/${USERNAME}/.git
 
