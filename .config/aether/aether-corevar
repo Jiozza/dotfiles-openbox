@@ -23,7 +23,7 @@ if [[ $THEME == "aetherDark" ]]; then ICONDIR="$HOME/$ICON_DARK_DIR"; elif [[ $T
 # ****************** #
 # Notifier directory #
 # ****************** #
-NOTIFIER="$HOME/.scripts/notify/notify-send.sh"
+NOTIFIER="$HOME/.local/bin/notify/notify-send.sh"
 
 # ************************************************** #
 # Customize this to your variable value to your own  #
