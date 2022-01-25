@@ -56,12 +56,12 @@
                 </startupnotify>
             </action>
         </item>
-        <item label="Google Chrome">
+        <item label="Brave Browser">
             <action name="Execute">
-                <command>google-chrome-stable</command>
+                <command>brave-browser</command>
                 <startupnotify>
                     <enabled>yes</enabled>
-                    <wmclass>Google-chrome</wmclass>
+                    <wmclass>brave-browser</wmclass>
                 </startupnotify>
             </action>
         </item>
