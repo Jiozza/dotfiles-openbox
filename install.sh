@@ -5,6 +5,7 @@ grep -rl 'iruha' dotfiles-openbox/ | xargs -i@ sed -i "s|iruha|${USER}|g" @
 
 cp -v -r dotfiles-openbox/. ~
 
+cd ~/.icons
 cat oomox* | tar -Jxvf - -i
 rm -r *.xz
 sudo mv oomox-aesthetic* /usr/share/icons/
