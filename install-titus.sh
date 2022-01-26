@@ -5,12 +5,14 @@ grep -rl 'iruha' dotfiles-openbox/ | xargs -i@ sed -i "s|iruha|${USERNAME}|g" @
 
 cp -v -r dotfiles-openbox/. ~/
 
-tar -Jxvf .icons/oomox-aesthetic*
-rm -r .icons/*.xz
-sudo mv .icons/oomox-aesthetic* /usr/share/icons/
+cd .icons
+cat oomox* | tar -Jxvf - -i
+rm -r /*.xz
+sudo mv /oomox-aesthetic* /usr/share/icons/
 
 fc-cache -rv
 
+cd ~
 # Clean up the mess
 rm -rf README.md LICENSE .git install.sh install-titus.sh dotfiles-openbox
 
