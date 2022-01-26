@@ -7,7 +7,7 @@ cp -v -r dotfiles-openbox/. ~/
 
 tar -Jxvf .icons/oomox-aesthetic*
 rm -r .icons/*.xz
-sudo mv .icons/. /usr/share/icons/
+sudo mv .icons/oomox-aesthetic* /usr/share/icons/
 
 fc-cache -rv
 
