@@ -1,7 +1,6 @@
 #!/bin/bash
 source ~/ArchTitus/setup.conf
 
-cd ~
 grep -rl 'iruha' dotfiles-openbox/ | xargs -i@ sed -i "s|iruha|${USERNAME}|g" @
 
 cp -v -r dotfiles-openbox/. ~/
