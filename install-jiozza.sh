@@ -1,5 +1,5 @@
 #!/bin/bash
-source ~/ArchTitus/setup.conf
+source ~/ArchJiozza/setup.conf
 
 grep -rl 'iruha' dotfiles-openbox/ | xargs -i@ sed -i "s|iruha|${USERNAME}|g" @
 
